@@ -48,6 +48,13 @@ npm run theme:dev
 npm run theme:build
 ```
 
+## Database Migrations
+
+* init aerich
+
+```sh
+aerich init -t app.config.TORTOISE_ORM --location ./app/db/migrations
+```
 
 ## Author
 
