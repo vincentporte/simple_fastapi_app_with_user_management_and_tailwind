@@ -76,3 +76,10 @@ This project is [MIT](https://github.com/vincentporte/simple_fastapi_app_with_us
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
+
+### notes
+* https://rogulski.it/blog/fastapi-async-db/
+* https://vincedgy.github.io/fastapi-async-with-postgresql/
+* https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-9-asynchronous-performance-basics/
+* https://github.com/karthikasasanka/fastapi-tortoise-orm-postgresql

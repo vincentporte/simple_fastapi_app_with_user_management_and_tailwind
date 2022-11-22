@@ -4,8 +4,8 @@
   "description": "# Setup your FastApi App",
   "main": "index.js",
   "scripts": {
-    "theme:dev": "postcss ./static/css/styles.src.css -w -o ./static/css/styles.css --verbose",
-    "theme:build": "NODE_ENV=production postcss ./static/css/styles.css -o ./static/css/styles.css --verbose"
+    "theme:dev": "postcss ./app/static/css/styles.src.css -w -o ./app/static/css/styles.css --verbose",
+    "theme:build": "NODE_ENV=production postcss ./app/static/css/styles.css -o ./app/static/css/styles.css --verbose"
   },
   "repository": {
     "type": "git",

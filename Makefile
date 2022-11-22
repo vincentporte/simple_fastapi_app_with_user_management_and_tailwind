@@ -1,4 +1,4 @@
-.PHONY: dependencies
+.PHONY: dependencies server live
 
 # DEVELOPMENT
 # ~~~~~~~~~~~
@@ -8,6 +8,12 @@
 dependencies:
 	poetry lock; poetry run poe export; poetry run poe export_dev
 
+live:
+	poetry run uvicorn app.main:app --workers 4 --host 0.0.0.0 --port 8000
+
+dev:
+	poetry run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
 # QUALITY ASSURANCE
 # ~~~~~~~~~~~~~~~~~
 # The following rules can be used to check code quality, import sorting, etc.
@@ -15,17 +21,17 @@ dependencies:
 
 .PHONY: quality fix pylint
 quality:
-	black --check apps
-	isort --check apps
-	flake8 apps --count --show-source --statistics
+	black --check app
+	isort --check app
+	flake8 app --count --show-source --statistics
 
 fix:
-	black apps
-	isort apps
-	flake8 apps
+	black app
+	isort app
+	flake8 app
 
 pylint:
-	pylint apps
+	pylint app
 
 # Docker shell.
 # =============================================================================
