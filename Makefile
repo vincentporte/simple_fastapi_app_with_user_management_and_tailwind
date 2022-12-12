@@ -9,10 +9,10 @@ dependencies:
 	poetry lock; poetry run poe export; poetry run poe export_dev
 
 live:
-	poetry run uvicorn app.main:app --workers 4 --host 0.0.0.0 --port 8000
+	uvicorn app.main:app --workers 4 --host 0.0.0.0 --port 8000
 
 dev:
-	poetry run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+	uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 # QUALITY ASSURANCE
 # ~~~~~~~~~~~~~~~~~
